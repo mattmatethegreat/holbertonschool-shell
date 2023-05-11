@@ -1,2 +1,2 @@
 #!/bin/bash
-~dir_path= 'dirname $path'
+~chmod u+x pwd 
