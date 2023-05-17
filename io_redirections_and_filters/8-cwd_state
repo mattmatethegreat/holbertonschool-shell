@@ -1,2 +1,2 @@
 #!/bin/bash
-file=ls_cwd_content && rm -f $file && ls -la  cat > $file
+file=ls_cwd_content ,  rm -f $file , ls -la  cat > $file
