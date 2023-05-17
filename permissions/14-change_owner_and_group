@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vincent:staff /root/holbertonschool-schell
+chown -hR vincent:staff
