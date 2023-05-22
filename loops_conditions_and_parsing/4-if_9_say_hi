@@ -9,5 +9,4 @@ if [ $x = 9 ]
 then 
        	echo "Hi"	
 	fi
-done                                                                                                                           
-~         
+done       
