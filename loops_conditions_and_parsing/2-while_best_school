@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# counting school
-count=0
-until [ $count == 10 ]
+x="0"
+while [ $x -lt 10 ]
 do 
-echo "Best School"
-_=$((count++))
+echo "best School"
+x="$(( x + 1 ))"
 done
