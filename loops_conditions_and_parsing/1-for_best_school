@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-making repeating text
+#
 for(i=1;i<=10;i++)
 {console.log("Best School");}
