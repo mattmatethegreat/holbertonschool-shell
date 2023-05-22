@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-#
-for(i=1;i<=10;i++)
-{console.log("Best School");}
+# listing best school
+
+count=0
+
+while [ $count -lt 10]
+do
+	echo "Best School"
+	((count++))
+done
