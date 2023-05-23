@@ -3,7 +3,7 @@
 
 for (( i=1; i>0; i++ ))
 do
-echo "to infinity and beyond
+echo "to infinity and beyond"
 sleep 2
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "I am invincible!!!" ' SIGTERM
 done
