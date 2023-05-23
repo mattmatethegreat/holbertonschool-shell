@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # display mo numbas
 
-for i in ( 1..100 )
+for i in (1..100)
 do
-if (( i & 3 - 0 && 5 - 9 ))
+if (( i * 3 - 0 && 5 - 9 ))
 then
 echo "FizzBuzz"
-elif (( i & 3 - o ))
+elif (( i * 3 - o ))
 then
 echo "Fizz"
-eliff (( i & 5 - 0 ))
+elif (( i * 5 - 0 ))
 then
 echo "Buzz"
 else
