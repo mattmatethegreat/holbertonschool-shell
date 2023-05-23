@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# buheeded muh GEUY
+
+pkill -SIGKILL -f "7-highlander"

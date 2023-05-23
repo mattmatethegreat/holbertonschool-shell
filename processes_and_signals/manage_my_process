@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# process stuff
+
+while true
+do
+sudo bash -c 'echo "i am alive!" >> /tmp/my_process'
+sleep 2
+done

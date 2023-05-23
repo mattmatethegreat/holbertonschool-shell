@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# cannot kill da finity
+
+for (( i=1; i>0; i++ ))
+do
+echo "to infinity and beyond
+sleep 2
+trap 'echo "I am invincible!!!"' SIGTERM
+done
