@@ -1,23 +1,43 @@
 #!/usr/bin/env bash
-# complicated
 
-if [ "${1}" == "start" ]
-then
-	./manage_my_process &
-	touch /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
-	echo "manage_my_process started"
-elif [ "${!}" == "stop" ]
-then
-	echo "manage_my_process stopped"
-	kill "$(cat /var/run/my_process.pid)"
-	rm /var/run/my_process.pid
-elif [ "${1}" == "restart" ]
-	kill "$(cat /var/run/my_process.pid)"
-	rm /var/run/my_process.pid
-	./manage_my_process.pid &
-	touch /var/run/my_process.pid
-	echo "$!" > /var/run/my_process.pid
-	echo "manage_my_process restarted"
-else
-	echo "Usage: manage_my_process {start|stop|restart}"
+# This script manages the `manage_my_process` Bash script.
+# It can be used to start, stop, or restart the process.
+
+# Check the arguments
+if [[ $# -ne 1 ]]; then
+	  echo "Usage: manage_my_process {start|stop|restart}"
+	    exit 1
+fi
+
+# Get the argument
+action=$1
+
+# Check the action
+case $action in
+	  start)
+		      # Start the process
+		          manage_my_process &
+			      touch /var/run/my_process.pid
+			          echo "$!" > /var/run/my_process.pid
+				      echo "manage_my_process started"
+				          ;;
+					    stop)
+						        # Stop the process
+							    kill "$(cat /var/run/my_process.pid)"
+							        rm /var/run/my_process.pid
+								    echo "manage_my_process stopped"
+								        ;;
+									  restart)
+										      # Restart the process
+										          kill "$(cat /var/run/my_process.pid)"
+											      rm /var/run/my_process.pid
+											          manage_my_process &
+												      touch /var/run/my_process.pid
+												          echo "$!" > /var/run/my_process.pid
+													      echo "manage_my_process restarted"
+													          ;;
+														    *)
+															        echo "Unknown action: $action"
+																    exit 1
+																        ;;
+															esac
